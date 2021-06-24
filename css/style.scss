@@ -1,0 +1,375 @@
+/*ОБНУЛЕНИЕ*/
+*{padding: 0;margin: 0;border: 0;}
+// :focus,:active {outline: none;}
+// a:focus,a:active {outline: none;}
+// nav,footer,header,aside{display: block; transition: 0.8s;}
+// html, body{height: 100%;width: 100%;font-size: 100%;}
+// input,button,textarea, body { font-family: 'Roboto', sans-serif; color: #333; transition: 0.8s;}
+// input::-ms-clear {display: none;}
+// button {cursor: pointer;}
+// button::-moz-focus-inner {padding:0; border:0;}
+// a,a:visited {text-decoration: none;}
+// a:hover {text-decoration: none;}
+// ul li {list-style: none;}
+/*
+background: #EEEFF1;
+
+*/
+
+
+body {
+   
+  height: 100%;
+  width:100%;
+  font-size: 16px;
+  transition: 0.6s;
+
+
+  @media (max-width: 739px), (max-height: 739px) {
+      font-size: 14px;
+      display: flex;
+      align-content: center;
+      justify-content: center;
+  }
+
+  scroll-behavior: smooth;
+}
+
+main {
+  width:1090px;
+  height:auto;
+  display: flex;
+  flex-direction: column;
+align-items:center;
+}
+
+section {
+  width:100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.grayBackground {
+  background: #EEEFF1;
+
+}
+
+button {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  color: #FFFFFF;
+  background: #34547A;
+  padding: 1.5rem 2.5rem;
+  transition: 0.8s;
+
+  &:hover {
+    background: #407ec9;
+    box-shadow: 10px 15px 20px rgba(116, 114, 114, 0.644)  
+  }
+
+  &:active{
+    color: #34547A;
+    background: #FFFFFF;
+    transition: 0.1s;
+    }
+}
+
+@mixin Roboto_base {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+  color: #000;
+}
+
+@mixin Roboto_LoremIpsum {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+  color: #727272;
+}
+
+h2 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 37px;  
+  color: #000000; 
+}
+
+img {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 100%;
+  height: 100%; 
+}
+
+.img {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: auto;
+  height: auto; 
+}
+
+.img1 {
+  background-image: url(/img/photoshop.png);
+}
+
+//HEADER
+
+.header_section-heigh{
+  height:700px;
+}
+
+header {
+  width: 100%;
+  height: 60px;
+  margin-top:57px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  h1 {
+  font-family: Revalia;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 60px;
+  color: #34547A;
+  }
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:flex-end;
+  width: 100%;
+    a {
+      @include Roboto_base;
+      letter-spacing: 0.1em;
+      text-decoration: none;
+      color: #000000;
+      margin-left: 42px;
+      transition: 0.8s;
+      &:hover {
+        color: #34547A;
+        text-shadow: 1px 1px #34547A;
+        text-shadow: -1px -1px #34547A;
+      }
+      &:active{
+        color: #f00303;
+        transition: 0.1s;
+        }
+    }
+  }
+
+  .contentWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 161px;
+  }
+
+.contentWrapper_desctopImage {
+  background-image: url(/image/notebook.png);
+  min-height: 210px;
+  min-width: 306px;
+  margin-right: 143px;
+}
+
+.contentWrapper_informForm {
+  display: flex;
+  flex-direction:column;
+  width: 100%;
+  min-width: 540px;
+  h3{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 79px;
+  color: #000000;
+  margin-bottom: 60px;
+  }
+  p{
+    @include Roboto_LoremIpsum;
+    margin-bottom: 60px;
+  }
+}
+
+//ABOUT ME
+
+.about_Me_info {
+  display: flex;
+  flex-direction:column;
+align-items: center;
+  h2{
+    margin-top: 119px;
+    margin-bottom:50px;
+  }
+
+  p{
+    @include Roboto_LoremIpsum;
+    margin-bottom: 100px;
+  }
+}
+.about_Me_project{
+  display: flex;
+  width: 100vw;
+  background: #34547A;
+  height: 250px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.project_wrapper {
+  display: flex;
+  margin-right: 52px;
+    img{
+      max-width: 47px;
+      max-height: 50px;
+    }
+    p{
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 26px;
+      color: #FFFFFF;
+    margin-left: 20px;
+  }
+  &:last-child{
+    margin-right: 0;
+  }
+}
+
+.my_skil_wrapper{
+  display: flex;
+  align-items: center;
+  height:755px;
+  width: 100%;
+}
+.my_skils {
+  width: 50%;
+  h2 {
+    margin-bottom: 50px;
+  }
+  p {
+    color: #727272;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    &:first-child{
+      margin-top: 0;
+    }
+  }
+}
+hr {
+  width: 445px;
+  height: 4px;
+  background: linear-gradient(to right, #34547A 80%, #C4C4C4 50%) no-repeat 50% 75%;
+  border-radius: 0.15rem;
+}
+
+.about_Me_avatar{
+  width: 50%;
+    img{
+    max-height: 555px;
+    max-width: 450px;
+    }
+}
+
+//ABOUT WORK
+
+.about_work_heigh{
+  height:1004px;
+  margin-bottom: 28px;
+}
+.about_work{
+  display: flex;
+  flex-direction:column;
+  align-items:center;
+  h2{
+    margin-top: 100px;
+    margin-bottom: 50px;
+  }
+  p{
+    @include Roboto_LoremIpsum;
+    text-align: center;
+  }
+}
+
+.about_work_video{
+  margin-top: 57px;
+}
+
+//IMAGE COLLAGE
+.imagge_colage{
+  width: 100%;
+}
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+.column{
+  flex: 25%;
+  max-width: 25%;
+  padding: 0;
+  margin: 0;
+  // img{
+  //   vertical-align: middle;
+  //   min-width: 480px;
+  //   min-height: 480px;
+  //   &:hover{
+  //     background-image: url(/icon/viewCondition.png);
+  //     background-position: inherit;
+  //     background-repeat: no-repeat;
+  //     background-position: center;
+  //     background-size: contain;
+  //     width: 57px;
+  //     height: 100px; 
+  //   }
+  // }
+}
+
+.img1{
+  background-image: url(/image/quadImageOne.png);
+  vertical-align: middle;
+  min-width: 480px;
+  min-height: 480px;
+  &:hover{
+    background-image: url(/icon/viewCondition.png);
+  }
+  
+}
+.img2{
+  background-image: url(/image/quadImageTwo.png);
+  vertical-align: middle;
+  min-width: 480px;
+  min-height: 480px;
+}
+// .visibale{
+//     background-image: url(/icon/viewCondition.png);
+//     background-position: inherit;
+//     background-repeat: no-repeat;
+//     width: 57px;
+//     height: 100px; 
+//     z-index: 1;
+//     &:hover{
+//       z-index: 10;
+//   }
+
+// }
+

@@ -1,0 +1,19 @@
+{
+  "name": "aboutmelessonfusion",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chisto4/AboutMeLessonFusion.git"
+  },
+  "author": "Chisto4",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chisto4/AboutMeLessonFusion/issues"
+  },
+  "homepage": "https://github.com/chisto4/AboutMeLessonFusion#readme"
+}

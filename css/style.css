@@ -176,7 +176,8 @@ nav {
     font-size: 16px;
     line-height: 26px;
     color: #727272;
-    margin-bottom: 100px; }
+    margin-bottom: 100px;
+    text-align: center; }
 
 .about_Me_project {
   display: flex;
@@ -270,19 +271,168 @@ hr {
   max-width: 25%;
   padding: 0;
   margin: 0; }
+  @media (max-width: 1279px) {
+    .column {
+      flex: 50%;
+      max-width: 50%; } }
+  @media (max-width: 840px) {
+    .column {
+      flex: 100%;
+      max-width: 100%; } }
 
 .img1 {
   background-image: url(/image/quadImageOne.png);
   vertical-align: middle;
+  max-width: auto;
+  max-height: auto;
   min-width: 480px;
-  min-height: 480px; }
+  min-height: 480px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: 0.5s; }
   .img1:hover {
-    background-image: url(/icon/viewCondition.png); }
+    background-image: url(/icon/viewCondition.png);
+    opacity: 0.5; }
+  @media (max-width: 1920px) {
+    .img1 {
+      min-width: 400px;
+      min-height: 400px; } }
+  @media (max-width: 1600px) {
+    .img1 {
+      min-width: 350px;
+      min-height: 350px; } }
+  @media (max-width: 1400px) {
+    .img1 {
+      min-width: 300px;
+      min-height: 300px; } }
+  @media (max-width: 1279px) {
+    .img1 {
+      min-width: 420px;
+      min-height: 420px; } }
 
 .img2 {
   background-image: url(/image/quadImageTwo.png);
   vertical-align: middle;
+  width: auto;
+  height: auto;
   min-width: 480px;
-  min-height: 480px; }
+  min-height: 480px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: 0.5s; }
+  .img2:hover {
+    background-image: url(/icon/viewCondition.png);
+    opacity: 0.5; }
+  @media (max-width: 1920px) {
+    .img2 {
+      min-width: 400px;
+      min-height: 400px; } }
+  @media (max-width: 1600px) {
+    .img2 {
+      min-width: 350px;
+      min-height: 350px; } }
+  @media (max-width: 1400px) {
+    .img2 {
+      min-width: 300px;
+      min-height: 300px; } }
+  @media (max-width: 1279px) {
+    .img2 {
+      min-width: 420px;
+      min-height: 420px; } }
+
+.form_for_question {
+  height: 762px;
+  margin-top: 28px; }
+
+.form_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .form_wrapper h2 {
+    margin-top: 100px;
+    margin-bottom: 50px; }
+  .form_wrapper p {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+    color: #727272;
+    text-align: center; }
+
+.user_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.user_info {
+  display: flex; }
+  .user_info input {
+    width: 255px;
+    height: 50px;
+    padding-left: 10px;
+    margin-top: 65px;
+    margin-bottom: 20px; }
+
+.user_name {
+  margin-right: 30px; }
+
+.user_message input {
+  width: 540px;
+  height: 175px;
+  padding-left: 10px;
+  overflow: hidden;
+  margin-bottom: 50px; }
+
+.footer_color_background {
+  background: #34547A;
+  height: 151px; }
+
+footer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center; }
+
+.autor_info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%; }
+  .autor_info h4 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 25px;
+    color: #FFFFFF; }
+  .autor_info p {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 21px;
+    color: #FFFFFF; }
+
+.social_contact {
+  display: flex;
+  justify-content: center;
+  width: 50%; }
+  .social_contact a {
+    margin-right: 22px; }
+    .social_contact a:last-child {
+      margin-right: 0; }
+
+.social_icon_href {
+  background: url(/icon/vk.png);
+  width: 24px;
+  height: 44px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain; }
 
 /*# sourceMappingURL=style.css.map */

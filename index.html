@@ -14,7 +14,7 @@
 </head>
 <body>
 
-  <section class="grayBackground header_section-heigh">
+  <section id="0" class="grayBackground header_section-heigh">
     <main>
       <header>
           <div class="header_logo">
@@ -23,11 +23,11 @@
             </h1>
           </div>
           <nav>
-            <a href="#">ГЛАВНАЯ</a>
-            <a href="#">ОБ АВТОРЕ</a>
-            <a href="#">РАБОТЫ</a>
-            <a href="#">ПРОЦЕСС</a>
-            <a href="#">КОНТАКТЫ</a>
+            <a href="#0">ГЛАВНАЯ</a>
+            <a href="#1">ОБ АВТОРЕ</a>
+            <a href="#2">РАБОТЫ</a>
+            <a href="#3">ПРОЦЕСС</a>
+            <a href="#4">КОНТАКТЫ</a>
           </nav>
       </header>
       <div class="contentWrapper">
@@ -49,7 +49,7 @@
     </main>
   </section>
 
-  <section class="about_Me_Wrapper">
+  <section id="1" class="about_Me_Wrapper">
     <main>
       <div class="about_Me_info">
         <h2>Обо мне</h2>
@@ -121,7 +121,7 @@
   </section>
   <section class="grayBackground about_work_heigh">
     <main>
-      <div class="about_work">
+      <div id="3" class="about_work">
         <h2>
           Как я работаю
         </h2>
@@ -139,20 +139,20 @@
       </div>
     </main>
   </section>
-  <section>
+  <section id="2">
     <div class="imagge_colage">
       <div class="row">
-        <div class="column img1"></div>
-        <div class="column img2"></div>
-        <div class="column img1"></div>
-        <div class="column img2"></div>
-        <div class="column img2"></div>
-        <div class="column img1"></div>
-        <div class="column img2"></div>
-        <div class="column img1"></div>
+        <div class="column img_colage_logic img1"></div>
+        <div class="column img_colage_logic img2"></div>
+        <div class="column img_colage_logic img1"></div>
+        <div class="column img_colage_logic img2"></div>
+        <div class="column img_colage_logic img2"></div>
+        <div class="column img_colage_logic img1"></div>
+        <div class="column img_colage_logic img2"></div>
+        <div class="column img_colage_logic img1"></div>
     </div>
   </section>
-  <section class="grayBackground form_for_question">
+  <section id="4" class="grayBackground form_for_question">
     <main>
       <div class="form_wrapper">
         <h2>
@@ -207,7 +207,11 @@
 
     </footer>
   </section>
-
+  <section>
+    <a href="#0">
+      <div id="up" class="up_Button"></div>
+    </a>
+  </section>
   <script src="/script/script.js"></script>
 </body>
 </html>

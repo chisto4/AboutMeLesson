@@ -1,5 +1,6 @@
 /*ОБНУЛЕНИЕ*/
-*{padding: 0;margin: 0;border: 0;}
+*{padding: 0;margin: 0;border: 0;  scroll-behavior: smooth;transition: 0.8s;}
+
 // :focus,:active {outline: none;}
 // a:focus,a:active {outline: none;}
 // nav,footer,header,aside{display: block; transition: 0.8s;}
@@ -23,16 +24,6 @@ body {
   width:100%;
   font-size: 16px;
   transition: 0.6s;
-
-
-  @media (max-width: 739px), (max-height: 739px) {
-      font-size: 14px;
-      display: flex;
-      align-content: center;
-      justify-content: center;
-  }
-
-  scroll-behavior: smooth;
 }
 
 main {
@@ -41,6 +32,12 @@ main {
   display: flex;
   flex-direction: column;
 align-items:center;
+@media screen and (max-width:1150px){
+  width:860px;
+}
+@media screen and (max-width:1022px), (max-height:740px) {
+width:404px;
+}
 }
 
 section {
@@ -122,8 +119,20 @@ img {
   height: auto; 
 }
 
-.img1 {
-  background-image: url(/img/photoshop.png);
+#up {
+  display: none;
+  background: url(/icon/up_button.png);
+  position: fixed;
+  width:100px;
+  height:100px;
+  z-index: 10;
+  bottom: 3rem;
+  right: 5rem;
+  opacity: 0.5;
+  &:hover{
+    opacity: 1;
+    transition: 0.5s;
+  }
 }
 
 //HEADER
@@ -147,6 +156,9 @@ header {
   line-height: 60px;
   color: #34547A;
   }
+  @media screen and (max-width:1022px), (max-height:740px) {
+  
+  }
 }
 nav {
   display: flex;
@@ -154,6 +166,7 @@ nav {
   align-items: center;
   justify-content:flex-end;
   width: 100%;
+
     a {
       @include Roboto_base;
       letter-spacing: 0.1em;
@@ -171,6 +184,9 @@ nav {
         transition: 0.1s;
         }
     }
+    @media screen and (max-width:1022px), (max-height:740px) {
+    display: none;
+    }
   }
 
   .contentWrapper {
@@ -179,6 +195,9 @@ nav {
     justify-content: space-around;
     width: 100%;
     margin-top: 161px;
+    @media screen and (max-width:1022px), (max-height:740px) {
+    flex-direction: column;
+    }
   }
 
 .contentWrapper_desctopImage {
@@ -205,6 +224,9 @@ nav {
   p{
     @include Roboto_LoremIpsum;
     margin-bottom: 60px;
+  }
+  @media screen and (max-width:1022px), (max-height:740px) {
+  min-width: 400px;
   }
 }
 
@@ -253,6 +275,9 @@ align-items: center;
   &:last-child{
     margin-right: 0;
   }
+  @media screen and (max-width:1150px){
+    margin-right: 30px;
+  }
 }
 
 .my_skil_wrapper{
@@ -280,6 +305,9 @@ hr {
   height: 4px;
   background: linear-gradient(to right, #34547A 80%, #C4C4C4 50%) no-repeat 50% 75%;
   border-radius: 0.15rem;
+  @media screen and (max-width:1150px){
+  width:300px;
+  }
 }
 
 .about_Me_avatar{
@@ -314,6 +342,17 @@ hr {
   margin-top: 57px;
 }
 
+video {
+  @media screen and (max-width:1150px){
+ width:840px;
+ height:460px;
+}
+@media screen and (max-width:1022px), (max-height:740px) {
+width:400px;
+height:240px;
+}
+}
+
 //IMAGE COLLAGE
 
 .imagge_colage{
@@ -340,8 +379,7 @@ hr {
   }
 }
 
-.img1{
-  background-image: url(/image/quadImageOne.png);
+.img_colage_logic{
   vertical-align: middle;
   max-width: auto;
   max-height: auto;
@@ -350,12 +388,39 @@ hr {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  transition: 0.5s;
-
+  position: relative;
   &:hover{
-    background-image: url(/icon/viewCondition.png);
-    opacity: 0.5;
+  &::before, &::after{
+    opacity: 1;
   }
+  }
+  &::after{
+    content: "";
+    width: 100px;
+    height: 58px;
+    top: calc(50% - 29px);
+    left: calc(50% - 50px);
+    position: absolute;
+    background: url(/icon/vision.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0;
+    transition: 0.8s;
+  }
+  &::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #34537ac7;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0;
+    transition: 0.8s;
+    }
+  
   @media (max-width: 1920px) {
     min-width: 400px;
     min-height: 400px;  
@@ -374,38 +439,11 @@ hr {
   }
 
 }
+.img1{
+  background-image: url(/image/quadImageOne.png);
+}
 .img2{
   background-image: url(/image/quadImageTwo.png);
-  vertical-align: middle;
-  width: auto;
-  height: auto;
-  min-width: 480px;
-  min-height: 480px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  transition: 0.5s;
-  &:hover{
-    background-image: url(/icon/viewCondition.png);
-    opacity: 0.5;
-  }
-
-  @media (max-width: 1920px) {
-    min-width: 400px;
-    min-height: 400px;  
-  }
-  @media (max-width: 1600px) {
-    min-width: 350px;
-    min-height: 350px;  
-  }
-  @media (max-width: 1400px) {
-    min-width: 300px;
-    min-height: 300px;  
-  }
-  @media (max-width: 1279px) {
-    min-width: 420px;
-    min-height: 420px;  
-  }
 }
 
 //FORM FOR QUESTION
@@ -426,7 +464,13 @@ hr {
   p{
     @include Roboto_LoremIpsum;
     text-align: center;
+    @media screen and (max-width:1022px), (max-height:740px) {
+    width:380px;
+    }
   }
+  @media screen and (max-width:1022px), (max-height:740px) {
+    width:400px;
+    }
 }
 .user_wrapper{
   display: flex;
@@ -453,6 +497,9 @@ hr {
     padding-left: 10px;
     overflow: hidden;
     margin-bottom: 50px;
+    @media screen and (max-width:1022px), (max-height:740px) {
+    width:390px;
+    }
   }
 }
 

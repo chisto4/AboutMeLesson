@@ -3,7 +3,9 @@
 * {
   padding: 0;
   margin: 0;
-  border: 0; }
+  border: 0;
+  scroll-behavior: smooth;
+  transition: 0.8s; }
 
 /*
 background: #EEEFF1;
@@ -13,14 +15,7 @@ body {
   height: 100%;
   width: 100%;
   font-size: 16px;
-  transition: 0.6s;
-  scroll-behavior: smooth; }
-  @media (max-width: 739px), (max-height: 739px) {
-    body {
-      font-size: 14px;
-      display: flex;
-      align-content: center;
-      justify-content: center; } }
+  transition: 0.6s; }
 
 main {
   width: 1090px;
@@ -28,6 +23,12 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center; }
+  @media screen and (max-width: 1150px) {
+    main {
+      width: 860px; } }
+  @media screen and (max-width: 1022px), (max-height: 740px) {
+    main {
+      width: 404px; } }
 
 section {
   width: 100%;
@@ -80,8 +81,19 @@ img {
   width: auto;
   height: auto; }
 
-.img1 {
-  background-image: url(/img/photoshop.png); }
+#up {
+  display: none;
+  background: url(/icon/up_button.png);
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  z-index: 10;
+  bottom: 3rem;
+  right: 5rem;
+  opacity: 0.5; }
+  #up:hover {
+    opacity: 1;
+    transition: 0.5s; }
 
 .header_section-heigh {
   height: 700px; }
@@ -126,6 +138,9 @@ nav {
     nav a:active {
       color: #f00303;
       transition: 0.1s; }
+  @media screen and (max-width: 1022px), (max-height: 740px) {
+    nav {
+      display: none; } }
 
 .contentWrapper {
   display: flex;
@@ -133,6 +148,9 @@ nav {
   justify-content: space-around;
   width: 100%;
   margin-top: 161px; }
+  @media screen and (max-width: 1022px), (max-height: 740px) {
+    .contentWrapper {
+      flex-direction: column; } }
 
 .contentWrapper_desctopImage {
   background-image: url(/image/notebook.png);
@@ -161,6 +179,9 @@ nav {
     line-height: 26px;
     color: #727272;
     margin-bottom: 60px; }
+  @media screen and (max-width: 1022px), (max-height: 740px) {
+    .contentWrapper_informForm {
+      min-width: 400px; } }
 
 .about_Me_info {
   display: flex;
@@ -204,6 +225,9 @@ nav {
     margin-left: 20px; }
   .project_wrapper:last-child {
     margin-right: 0; }
+  @media screen and (max-width: 1150px) {
+    .project_wrapper {
+      margin-right: 30px; } }
 
 .my_skil_wrapper {
   display: flex;
@@ -227,6 +251,9 @@ hr {
   height: 4px;
   background: linear-gradient(to right, #34547A 80%, #C4C4C4 50%) no-repeat 50% 75%;
   border-radius: 0.15rem; }
+  @media screen and (max-width: 1150px) {
+    hr {
+      width: 300px; } }
 
 .about_Me_avatar {
   width: 50%; }
@@ -257,6 +284,15 @@ hr {
 .about_work_video {
   margin-top: 57px; }
 
+@media screen and (max-width: 1150px) {
+  video {
+    width: 840px;
+    height: 460px; } }
+@media screen and (max-width: 1022px), (max-height: 740px) {
+  video {
+    width: 400px;
+    height: 240px; } }
+
 .imagge_colage {
   width: 100%; }
 
@@ -280,8 +316,7 @@ hr {
       flex: 100%;
       max-width: 100%; } }
 
-.img1 {
-  background-image: url(/image/quadImageOne.png);
+.img_colage_logic {
   vertical-align: middle;
   max-width: auto;
   max-height: auto;
@@ -290,57 +325,55 @@ hr {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  transition: 0.5s; }
-  .img1:hover {
-    background-image: url(/icon/viewCondition.png);
-    opacity: 0.5; }
+  position: relative; }
+  .img_colage_logic:hover::before, .img_colage_logic:hover::after {
+    opacity: 1; }
+  .img_colage_logic::after {
+    content: "";
+    width: 100px;
+    height: 58px;
+    top: calc(50% - 29px);
+    left: calc(50% - 50px);
+    position: absolute;
+    background: url(/icon/vision.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0;
+    transition: 0.8s; }
+  .img_colage_logic::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #34537ac7;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0;
+    transition: 0.8s; }
   @media (max-width: 1920px) {
-    .img1 {
+    .img_colage_logic {
       min-width: 400px;
       min-height: 400px; } }
   @media (max-width: 1600px) {
-    .img1 {
+    .img_colage_logic {
       min-width: 350px;
       min-height: 350px; } }
   @media (max-width: 1400px) {
-    .img1 {
+    .img_colage_logic {
       min-width: 300px;
       min-height: 300px; } }
   @media (max-width: 1279px) {
-    .img1 {
+    .img_colage_logic {
       min-width: 420px;
       min-height: 420px; } }
 
+.img1 {
+  background-image: url(/image/quadImageOne.png); }
+
 .img2 {
-  background-image: url(/image/quadImageTwo.png);
-  vertical-align: middle;
-  width: auto;
-  height: auto;
-  min-width: 480px;
-  min-height: 480px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  transition: 0.5s; }
-  .img2:hover {
-    background-image: url(/icon/viewCondition.png);
-    opacity: 0.5; }
-  @media (max-width: 1920px) {
-    .img2 {
-      min-width: 400px;
-      min-height: 400px; } }
-  @media (max-width: 1600px) {
-    .img2 {
-      min-width: 350px;
-      min-height: 350px; } }
-  @media (max-width: 1400px) {
-    .img2 {
-      min-width: 300px;
-      min-height: 300px; } }
-  @media (max-width: 1279px) {
-    .img2 {
-      min-width: 420px;
-      min-height: 420px; } }
+  background-image: url(/image/quadImageTwo.png); }
 
 .form_for_question {
   height: 762px;
@@ -361,6 +394,12 @@ hr {
     line-height: 26px;
     color: #727272;
     text-align: center; }
+    @media screen and (max-width: 1022px), (max-height: 740px) {
+      .form_wrapper p {
+        width: 380px; } }
+  @media screen and (max-width: 1022px), (max-height: 740px) {
+    .form_wrapper {
+      width: 400px; } }
 
 .user_wrapper {
   display: flex;
@@ -385,6 +424,9 @@ hr {
   padding-left: 10px;
   overflow: hidden;
   margin-bottom: 50px; }
+  @media screen and (max-width: 1022px), (max-height: 740px) {
+    .user_message input {
+      width: 390px; } }
 
 .footer_color_background {
   background: #34547A;

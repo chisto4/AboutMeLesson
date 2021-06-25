@@ -25,10 +25,10 @@ main {
   align-items: center; }
   @media screen and (max-width: 1150px) {
     main {
-      width: 860px; } }
+      width: 90%; } }
   @media screen and (max-width: 1022px), (max-height: 740px) {
     main {
-      width: 404px; } }
+      width: 90%; } }
 
 section {
   width: 100%;
@@ -97,6 +97,9 @@ img {
 
 .header_section-heigh {
   height: 700px; }
+  @media screen and (max-width: 1022px), (max-height: 740px) {
+    .header_section-heigh {
+      height: 782px; } }
 
 header {
   width: 100%;
@@ -112,6 +115,12 @@ header {
     font-size: 48px;
     line-height: 60px;
     color: #34547A; }
+    @media screen and (max-width: 1022px), (max-height: 740px) {
+      header h1 {
+        margin-left: 19px; } }
+  @media screen and (max-width: 1022px), (max-height: 740px) {
+    header {
+      margin-top: 22px; } }
 
 nav {
   display: flex;
@@ -151,12 +160,19 @@ nav {
   @media screen and (max-width: 1022px), (max-height: 740px) {
     .contentWrapper {
       flex-direction: column; } }
+  @media screen and (max-width: 1022px), (max-height: 740px) {
+    .contentWrapper {
+      margin-top: 22px; } }
 
-.contentWrapper_desctopImage {
+.contentWrapper_desctop_Image {
   background-image: url(/image/notebook.png);
   min-height: 210px;
   min-width: 306px;
   margin-right: 143px; }
+  @media screen and (max-width: 1022px), (max-height: 740px) {
+    .contentWrapper_desctop_Image {
+      margin-right: 0;
+      margin-top: 30px; } }
 
 .contentWrapper_informForm {
   display: flex;
@@ -171,6 +187,13 @@ nav {
     line-height: 79px;
     color: #000000;
     margin-bottom: 60px; }
+    @media screen and (max-width: 1022px), (max-height: 740px) {
+      .contentWrapper_informForm h3 {
+        margin-top: 51px;
+        font-size: 36px;
+        text-align: center;
+        margin-bottom: 44px;
+        line-height: 100%; } }
   .contentWrapper_informForm p {
     font-family: Roboto;
     font-style: normal;
@@ -179,9 +202,18 @@ nav {
     line-height: 26px;
     color: #727272;
     margin-bottom: 60px; }
+    @media screen and (max-width: 1022px), (max-height: 740px) {
+      .contentWrapper_informForm p {
+        text-align: center;
+        line-height: 120%; } }
   @media screen and (max-width: 1022px), (max-height: 740px) {
     .contentWrapper_informForm {
-      min-width: 400px; } }
+      min-width: 95%; } }
+
+@media screen and (max-width: 1022px), (max-height: 740px) {
+  .infrom_form_button {
+    display: flex;
+    justify-content: center; } }
 
 .about_Me_info {
   display: flex;
@@ -190,6 +222,10 @@ nav {
   .about_Me_info h2 {
     margin-top: 119px;
     margin-bottom: 50px; }
+    @media screen and (max-width: 1022px), (max-height: 740px) {
+      .about_Me_info h2 {
+        margin-top: 91px;
+        margin-bottom: 42px; } }
   .about_Me_info p {
     font-family: Roboto;
     font-style: normal;
@@ -199,6 +235,10 @@ nav {
     color: #727272;
     margin-bottom: 100px;
     text-align: center; }
+    @media screen and (max-width: 1022px), (max-height: 740px) {
+      .about_Me_info p {
+        width: 100%;
+        margin-bottom: 82px; } }
 
 .about_Me_project {
   display: flex;
@@ -208,6 +248,12 @@ nav {
   flex-direction: row;
   justify-content: center;
   align-items: center; }
+  @media screen and (max-width: 1022px), (max-height: 740px) {
+    .about_Me_project {
+      flex-wrap: wrap;
+      justify-content: space-around;
+      width: 110%;
+      height: 474px; } }
 
 .project_wrapper {
   display: flex;
@@ -228,23 +274,45 @@ nav {
   @media screen and (max-width: 1150px) {
     .project_wrapper {
       margin-right: 30px; } }
+  @media screen and (max-width: 1022px), (max-height: 740px) {
+    .project_wrapper {
+      margin-right: 0; } }
 
 .my_skil_wrapper {
   display: flex;
   align-items: center;
   height: 755px;
   width: 100%; }
+  @media screen and (max-width: 1022px), (max-height: 740px) {
+    .my_skil_wrapper {
+      flex-direction: column-reverse;
+      height: 815px;
+      justify-content: center; } }
 
 .my_skils {
   width: 50%; }
   .my_skils h2 {
     margin-bottom: 50px; }
+    @media screen and (max-width: 1022px), (max-height: 740px) {
+      .my_skils h2 {
+        margin-bottom: 42px;
+        margin-top: 98px;
+        text-align: center; } }
   .my_skils p {
     color: #727272;
     margin-bottom: 20px;
     margin-top: 30px; }
     .my_skils p:first-child {
       margin-top: 0; }
+    @media screen and (max-width: 1022px), (max-height: 740px) {
+      .my_skils p {
+        margin-left: -65%; } }
+  @media screen and (max-width: 1022px), (max-height: 740px) {
+    .my_skils {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center; } }
 
 hr {
   width: 445px;
@@ -254,16 +322,30 @@ hr {
   @media screen and (max-width: 1150px) {
     hr {
       width: 300px; } }
+  @media screen and (max-width: 1022px), (max-height: 740px) {
+    hr {
+      width: 95%; } }
 
 .about_Me_avatar {
   width: 50%; }
   .about_Me_avatar img {
     max-height: 555px;
     max-width: 450px; }
+  @media screen and (max-width: 1022px), (max-height: 740px) {
+    .about_Me_avatar {
+      width: 100%;
+      display: flex;
+      justify-content: center; } }
 
 .about_work_heigh {
   height: 1004px;
   margin-bottom: 28px; }
+  @media screen and (max-width: 1022px), (max-height: 768px) {
+    .about_work_heigh {
+      height: calc(100vw * 1.1); } }
+  @media screen and (max-width: 680px), (max-height: 740px) {
+    .about_work_heigh {
+      height: calc(100vw * 1.4); } }
 
 .about_work {
   display: flex;
@@ -272,6 +354,10 @@ hr {
   .about_work h2 {
     margin-top: 100px;
     margin-bottom: 50px; }
+    @media screen and (max-width: 1022px), (max-height: 740px) {
+      .about_work h2 {
+        margin-top: 93px;
+        margin-bottom: 34px; } }
   .about_work p {
     font-family: Roboto;
     font-style: normal;
@@ -283,6 +369,10 @@ hr {
 
 .about_work_video {
   margin-top: 57px; }
+  @media screen and (max-width: 1022px), (max-height: 740px) {
+    .about_work_video {
+      display: flex;
+      justify-content: center; } }
 
 @media screen and (max-width: 1150px) {
   video {
@@ -290,8 +380,13 @@ hr {
     height: 460px; } }
 @media screen and (max-width: 1022px), (max-height: 740px) {
   video {
-    width: 400px;
-    height: 240px; } }
+    width: 95%;
+    height: auto;
+    margin-bottom: 91px; } }
+@media screen and (max-width: 412px), (max-height: 670px) {
+  video {
+    width: 95%;
+    height: auto; } }
 
 .imagge_colage {
   width: 100%; }
@@ -311,10 +406,6 @@ hr {
     .column {
       flex: 50%;
       max-width: 50%; } }
-  @media (max-width: 840px) {
-    .column {
-      flex: 100%;
-      max-width: 100%; } }
 
 .img_colage_logic {
   vertical-align: middle;
@@ -366,8 +457,24 @@ hr {
       min-height: 300px; } }
   @media (max-width: 1279px) {
     .img_colage_logic {
-      min-width: 420px;
-      min-height: 420px; } }
+      min-width: 500px;
+      min-height: 500px; } }
+  @media (max-width: 999px) {
+    .img_colage_logic {
+      min-width: 400px;
+      min-height: 400px; } }
+  @media (max-width: 799px) {
+    .img_colage_logic {
+      min-width: 300px;
+      min-height: 300px; } }
+  @media (max-width: 599px) {
+    .img_colage_logic {
+      min-width: 200px;
+      min-height: 200px; } }
+  @media (max-width: 401px) {
+    .img_colage_logic {
+      min-width: 160px;
+      min-height: 160px; } }
 
 .img1 {
   background-image: url(/image/quadImageOne.png); }
@@ -378,6 +485,9 @@ hr {
 .form_for_question {
   height: 762px;
   margin-top: 28px; }
+  @media screen and (max-width: 1022px), (max-height: 740px) {
+    .form_for_question {
+      height: 830px; } }
 
 .form_wrapper {
   display: flex;
@@ -386,6 +496,10 @@ hr {
   .form_wrapper h2 {
     margin-top: 100px;
     margin-bottom: 50px; }
+    @media screen and (max-width: 1022px), (max-height: 740px) {
+      .form_wrapper h2 {
+        margin-top: 91px;
+        margin-bottom: 34px; } }
   .form_wrapper p {
     font-family: Roboto;
     font-style: normal;
@@ -396,15 +510,27 @@ hr {
     text-align: center; }
     @media screen and (max-width: 1022px), (max-height: 740px) {
       .form_wrapper p {
-        width: 380px; } }
+        width: 100%;
+        line-height: 120%;
+        margin-bottom: 26px; } }
   @media screen and (max-width: 1022px), (max-height: 740px) {
     .form_wrapper {
-      width: 400px; } }
+      width: 100%;
+      height: 830px; } }
 
 .user_wrapper {
   display: flex;
   flex-direction: column;
   align-items: center; }
+  @media screen and (max-width: 1022px), (max-height: 740px) {
+    .user_wrapper {
+      width: 100%; } }
+  @media screen and (max-width: 1022px), (max-height: 740px) {
+    .user_wrapper button {
+      width: 190px;
+      height: 55px;
+      padding: 0;
+      font-size: 14px; } }
 
 .user_info {
   display: flex; }
@@ -414,9 +540,26 @@ hr {
     padding-left: 10px;
     margin-top: 65px;
     margin-bottom: 20px; }
+    @media screen and (max-width: 1022px), (max-height: 740px) {
+      .user_info input {
+        width: 95%;
+        margin-top: 22px;
+        margin-bottom: 0; } }
+  @media screen and (max-width: 1022px), (max-height: 740px) {
+    .user_info {
+      flex-direction: column;
+      width: 100%; } }
 
 .user_name {
   margin-right: 30px; }
+  @media screen and (max-width: 1022px), (max-height: 740px) {
+    .user_name {
+      width: 100%;
+      margin-right: 0; } }
+
+@media screen and (max-width: 1022px), (max-height: 740px) {
+  .user_email {
+    margin-bottom: 22px; } }
 
 .user_message input {
   width: 540px;
@@ -426,7 +569,11 @@ hr {
   margin-bottom: 50px; }
   @media screen and (max-width: 1022px), (max-height: 740px) {
     .user_message input {
-      width: 390px; } }
+      width: 95%;
+      margin-bottom: 48px; } }
+@media screen and (max-width: 1022px), (max-height: 740px) {
+  .user_message {
+    width: 100%; } }
 
 .footer_color_background {
   background: #34547A;
@@ -439,12 +586,20 @@ footer {
   flex-direction: row;
   justify-content: space-around;
   align-items: center; }
+  @media screen and (max-width: 1022px), (max-height: 740px) {
+    footer {
+      flex-direction: column;
+      justify-content: center;
+      height: 210px; } }
 
 .autor_info {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 50%; }
+  @media screen and (max-width: 1022px), (max-height: 740px) {
+    .autor_info {
+      width: 100%; } }
   .autor_info h4 {
     font-family: Roboto;
     font-style: normal;

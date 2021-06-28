@@ -1,23 +1,6 @@
 /*ОБНУЛЕНИЕ*/
 *{padding: 0;margin: 0;border: 0;  scroll-behavior: smooth;transition: 0.8s;}
 
-// :focus,:active {outline: none;}
-// a:focus,a:active {outline: none;}
-// nav,footer,header,aside{display: block; transition: 0.8s;}
-// html, body{height: 100%;width: 100%;font-size: 100%;}
-// input,button,textarea, body { font-family: 'Roboto', sans-serif; color: #333; transition: 0.8s;}
-// input::-ms-clear {display: none;}
-// button {cursor: pointer;}
-// button::-moz-focus-inner {padding:0; border:0;}
-// a,a:visited {text-decoration: none;}
-// a:hover {text-decoration: none;}
-// ul li {list-style: none;}
-/*
-background: #EEEFF1;
-
-*/
-
-
 body {
    
   height: 100%;
@@ -123,12 +106,16 @@ img {
   width:100px;
   height:100px;
   z-index: 10;
-  bottom: 3rem;
+  bottom: 2rem;
   right: 5rem;
   opacity: 0.5;
   &:hover{
     opacity: 1;
     transition: 0.5s;
+  }
+  @media screen and (max-width:1025px), (max-height:740px) {
+  bottom: 1rem;
+  right:2rem;
   }
 }
 
@@ -321,6 +308,12 @@ nav {
   @media screen and (max-width:1022px), (max-height:740px) {
   margin-right: 0;
   }
+  @media screen and (max-width:900px), (max-height:680px) {
+  flex: 50%;
+  display: flex;
+  justify-content:center;
+  }
+
 }
 
 .my_skil_wrapper{
@@ -397,18 +390,6 @@ hr {
 .about_work_heigh{
   height:auto;
   margin-bottom: 28px;
-  // @media screen and (max-width:1022px), (max-height:768px) {
-  // height:calc(100vw * 1.1);
-  // }
-  // @media screen and (max-width:680px), (max-height:740px) {
-  // height:calc(100vw * 1.4);
-  // }
-  // @media screen and (max-width:370px), (max-height:740px) {
-  //   height:calc(100vw * 1.8);
-  //   }
-  // @media screen and (max-width:1022px), (max-height:740px) {
-  // height:596px;
-  // }
 }
 
 
@@ -461,7 +442,7 @@ height:auto;
   display: flex;
   flex-direction:column;
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 .row{
 display: flex;
@@ -507,6 +488,9 @@ width: 100%;
     background: #34537ac7;
     opacity: 0;
     transition: 0.8s;
+    }
+    img {
+      height: 100%;
     }
 }
 .row_revers{
@@ -588,11 +572,6 @@ width: 100%;
 }
 .user_name{
   margin-right: 30px;
-  // input{
-  //   @media screen and (max-width:1022px), (max-height:740px) {
-  //     width:100%
-  //     }
-  // }
   @media screen and (max-width:1022px), (max-height:740px) {
   width:100%;
   margin-right: 0;

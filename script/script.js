@@ -16,3 +16,12 @@ $(document).ready(function() {
     });
   });
 });
+
+function scrollOnWriteOption(top) {
+  const writeMeSelector = document.querySelector('.autor_info');
+  writeMeSelector.scrollIntoView(top);
+}
+
+const buttonWriteMe = document.getElementsByClassName('write_Me_Button');
+
+buttonWriteMe.onClick = scrollOnWriteOption();
